@@ -17,8 +17,8 @@ if (config.use_env_variable) {
 }
 sequelize.authenticate().then(() => {
   console.log('db connected')
-}).catch(() => {
-  console.log('connection refuse')
+}).catch((error) => {
+  console.log('connection refuse', error)
 })
 fs
   .readdirSync(__dirname)
